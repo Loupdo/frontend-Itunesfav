@@ -13,6 +13,9 @@ export default defineConfig({
       },
     },
   },
+  preview: {
+    allowedHosts: ['frontend-itunesfav.onrender.com'],
+  },
   test: {
     globals: true,
     environment: "jsdom",
