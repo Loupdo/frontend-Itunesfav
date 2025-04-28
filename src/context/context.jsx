@@ -8,7 +8,7 @@ export function AppProvider({ children }) {
   const [favorites, setFavorites] = useState([]);
   const [token, setToken] = useState("");
   const API_BASE_URL = import.meta.env.PROD
-    ? "https://backend-itunesfav.onrender.com"
+    ? "https://backend-itunesfav.onrender.com/api"
     : "/api";
 
   const fetchToken = async () => {

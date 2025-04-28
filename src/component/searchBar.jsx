@@ -12,7 +12,7 @@ export default function SearchBar() {
   const [input, setInput] = useState("");
   const { setDataSearch, token } = useApp();
   const API_BASE_URL = import.meta.env.PROD
-    ? "https://backend-itunesfav.onrender.com"
+    ? "https://backend-itunesfav.onrender.com/api"
     : "/api";
 
   // Fetches data from the API based on the search parameters.
