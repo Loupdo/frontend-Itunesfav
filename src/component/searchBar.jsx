@@ -11,12 +11,15 @@ export default function SearchBar() {
   const [dropdownName, setdropdownName] = useState("All media");
   const [input, setInput] = useState("");
   const { setDataSearch, token } = useApp();
+  const API_BASE_URL = import.meta.env.PROD
+    ? "https://backend-itunesfav.onrender.com"
+    : "/api";
 
   // Fetches data from the API based on the search parameters.
   const fetchData = async (obj) => {
     try {
       // GET API search results with authorization (searchRoute)
-      const response = await axios.get("/api/search", {
+      const response = await axios.get(`${API_BASE_URL}/search`, {
         params: obj,
         headers: {
           Authorization: `Bearer ${token}`,
